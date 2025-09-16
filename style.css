@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #161414;
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
+  }
+}
+
+.open-btn {
+  padding: 15px 30px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 500;
+  background: #ff0000;
+  border: none;
+  cursor: pointer;
+
+  .open-btn {
+    padding: 16px 36px;
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 600;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .open-btn:hover,
+  .open-btn:focus {
+    background: #1d4ed8;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+  }
+  transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+  background: #e60000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(37, 99, 235, 0.18);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 2, 0.3, 1);
+    z-index: 10;
+  }
+
+  .overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  padding: 30px;
+  width: 400px;
+  background: #fff;
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 36px 32px 28px 32px;
+    width: 360px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1),
+      0 1.5px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-radius: 18px;
+    transition: all 0.3s cubic-bezier(0.4, 2, 0.3, 1);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 20;
+  }
+
+  .popup.open {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+
+  .popup h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2563eb;
+  }
+  z-index: 20;
+}
+
+.popup.open {
+  transform: translate(-50%, -50%) scale(1);
+
+  .popup p {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 22px;
+  }
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup h2 {
+  .popup button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    color: #fff;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1.5px 6px rgba(34, 197, 94, 0.08);
+  }
+
+  .popup button:hover,
+  .popup button:focus {
+    background: #16a34a;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
+  }
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+
+  .popup img {
+    width: 80px;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    background: #e0e7ff;
+    padding: 8px;
+  }
+}
+
+.popup p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.popup button {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: #ff0000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.popup img {
+  width: 100px;
+  margin-top: -80px;
+}
